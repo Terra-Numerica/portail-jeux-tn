@@ -62,7 +62,7 @@ body{
     background: #fff;
 }
 
-.wrapper img{
+#logo {
     align-items: center;
     margin-top: -2.5%;
     margin-left: 3%;
@@ -71,9 +71,7 @@ body{
 .wrapper h2{
     text-align: center;
     color: #fff;
-    font-size: 75px;
-    margin-top: 12%;
-    margin-bottom: 15px;
+    font-size: 75px; 
 }
 
 .wrapper p{
@@ -185,4 +183,26 @@ body{
         background-position: right;
         opacity: 1;
     }
-  }
+}
+
+.grid {
+    height: 75%;
+    margin: auto 2%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-element img {
+    display: block;
+    /* margin: auto; */
+    border: 3px solid white;
+    border-radius: 20px;
+}
