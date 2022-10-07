@@ -186,18 +186,42 @@ body{
 }
 
 .grid {
-    height: 75%;
-    margin: auto 2%;
+    height: 80%;
+    margin: auto 10%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-template-areas: 
+        "presentation jeu1 liste-jeux liste-jeux"
+        "presentation jeu2 news jeu3"
+        "presentation jeu4 jeu5 jeu6";
+
+    /* grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr; */
+    gap: 5px;
+    background-color: white;
+    border: 5px solid white;
+}
+
+/* Mobile */
+@media screen and (max-width: 1400px) {
+    .grid {
+        grid-template-areas:
+            "presentation jeu1"
+            "presentation jeu2"
+            "presentation jeu4"
+            "liste-jeux liste-jeux"
+            "news jeu3"
+            "jeu5 jeu6";
+    }
 }
 
 .grid-element {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: green;
+    /* border: 3px solid white; */
 }
 
 .grid-element img {
@@ -206,3 +230,13 @@ body{
     border: 3px solid white;
     border-radius: 20px;
 }
+
+.presentation {grid-area: presentation;}
+.liste-jeux {grid-area: liste-jeux;}
+.news {grid-area: news;}
+.jeu1 {grid-area: jeu1;}
+.jeu2 {grid-area: jeu2;}
+.jeu3 {grid-area: jeu3;}
+.jeu4 {grid-area: jeu4;}
+.jeu5 {grid-area: jeu5;}
+.jeu6 {grid-area: jeu6;}
