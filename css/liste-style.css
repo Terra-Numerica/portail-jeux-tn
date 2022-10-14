@@ -46,7 +46,7 @@ input[type="search"] {
     background-color: var(--card-bg-color);
     border-radius: 25px;
     height: 500px;
-    padding-bottom: 1%;
+    /* padding-bottom: 1%; */
     overflow: hidden;
 }
 
@@ -56,12 +56,13 @@ input[type="search"] {
     border-radius: 10px;
     width: 100%;
     object-fit: cover;
+    padding-bottom: 1%;
 }
 
 .gameDesc {
     flex: 1.5;
     position: relative;
-    border-right: 3px solid white;
+    border-right: 2px solid white;
 }
 
 
@@ -83,8 +84,8 @@ h3 {
     /* height: 69.2px; */
     height: 8em;
 
-    /*card height + padding - gradient height*/
-    top: calc(500px + 5% - 8em); 
+    /*card height - gradient height*/
+    top: calc(500px - 8em); 
     
     /* border: 2px solid red; */
     background-image: linear-gradient(to bottom, transparent, var(--card-bg-color) 90%);

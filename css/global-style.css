@@ -90,7 +90,7 @@ h3 {
 }
 
 .box div{
-    position:absolute;
+    position: fixed;
     width: 10px;
     height: 10px;
     background: transparent;
