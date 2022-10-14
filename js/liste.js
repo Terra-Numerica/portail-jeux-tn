@@ -1,3 +1,10 @@
+const cycleColors = {
+    "1": "green",
+    "2": "red",
+    "3": "blue",
+    "4": "purple"
+}
+
 const renderGameCard = (jeu) => {
     var out = `<div class="gameCard">
     <img class="gameThumbnail" src="assets/${jeu.thumbnail}" alt="">
@@ -8,7 +15,7 @@ const renderGameCard = (jeu) => {
     </div>
     <div class="gameInfo">
         <div class="cycleInfo">
-            <h3>Cycle <span class="cycle">${jeu.cycle}</span></h3>
+            <h3>Cycle <span style="background-color: ${cycleColors[jeu.cycle]};" class="cycle">${jeu.cycle}</span></h3>
         </div>
         <div class="themesInfo">
             <h3>Thèmes</h3>\n`;
