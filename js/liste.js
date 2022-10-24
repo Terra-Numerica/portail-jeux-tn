@@ -55,7 +55,7 @@ const filterCycle = () =>{
 
     var jeuxFiltres = [];
 
-    if(filtre["cycle1"] === false && filtre["cycle2"] === false && filtre["cycle3"] === false && filtre["cycle4"] === false) {
+    if(!(filtre["cycle1"] || filtre["cycle2"] || filtre["cycle3"] || filtre["cycle4"])) {
         jeuxFiltres = arrJeux;
     }
     else {
@@ -105,4 +105,6 @@ $(function() {
     //Event binding
     $(".searchForm").change(filterCycle);
     $(".searchForm").submit(filterSearch);
+
+    $("#test").click(() => $(".searchForm").submit());
 });

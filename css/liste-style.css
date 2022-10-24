@@ -15,9 +15,6 @@
     align-self: center;
 }
 
-#searchBar {
-    flex: 2;
-}
 
 label {
     font-size: 1.5em;
@@ -30,16 +27,6 @@ input[type="checkbox"] {
     transform: scale(1.5);
 }
 
-input[type="search"] {
-    /* height: 5em; */
-    width: 80%;
-    margin: 0 10%;
-    border-radius: 5em;
-    font-size: 2.5em;
-    padding: 0 0.5em;
-    border: 3px solid darkgray;
-}
-
 .gameCard {
     display: flex;
     margin: 2.5% 2.5% 0 2.5%;
@@ -48,6 +35,12 @@ input[type="search"] {
     height: 500px;
     /* padding-bottom: 1%; */
     overflow: hidden;
+    animation: fadeIn 0.1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .gameThumbnail {
@@ -131,4 +124,56 @@ h3 {
     padding: 0.1em 0.5em;
     line-height: 2.2em;
     white-space: nowrap;
+}
+
+
+
+button {
+    height: 4rem;
+    width: 4rem;
+    background-color: transparent;
+    border: transparent;
+    transition-duration: 0.5s;
+    transition-property: background-color;
+    border-radius: 2rem;
+    position: relative;
+    left: 0.65rem
+}
+
+button:hover {
+    background-color: darkgrey;
+}
+
+button:active {
+    background-color: lightgray;
+}
+
+button > img {
+    height: 50%;
+    position: relative;
+    top: 0.2rem;
+    /* position: absolute; */
+}
+
+#searchBar {
+    flex: 2;
+    width: 80%;
+    margin: 0 10%;
+    border-radius: 5em;
+    padding: 0 0.5em;
+    border: 3px solid darkgray;
+    background-color: white;
+}
+
+#searchBar > input {
+    height: 100%;
+    font-size: 2.5em;
+    width: calc(100% - 5rem);
+    background-color: transparent;
+    border: transparent;
+    margin-left: 0.25em;
+}
+
+#searchBar > input:focus {
+    outline: none;
 }
