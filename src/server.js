@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 import express from 'express';
+import 'dotenv/config';
 
 const app = express();
 
@@ -18,4 +19,5 @@ app.use('/', homeRoute);
 
 app.get('*', (req, res) => res.status(404).render('errors/404'));
 
-app.listen(3000, () => console.log('[Portail-TN] Listen on port 3000'));
+const port = process.env.port || 3000;
+app.listen(port, () => console.log(`[Portail-TN] Listen on port ${port}`));
