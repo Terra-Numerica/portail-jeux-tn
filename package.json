@@ -1,0 +1,17 @@
+{
+  "name": "portail-jeux-tn",
+  "description": "Ce portail est un portail de jeux qui s'adresse en particulier aux scolaires et aux jeunes",
+  "version": "1.0",
+  "author": "Kushiie",
+  "main": "src/server.js",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
