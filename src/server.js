@@ -1,5 +1,5 @@
-import express from 'express';
 import { resolve } from 'path';
+import express from 'express';
 
 const app = express();
 
@@ -11,7 +11,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(resolve('./src/public')));
 app.use(express.json());
 
-app.get('/', (req, res) => res.render('home'));
+// Route
+import homeRoute from './routes/home.js';
+
+app.use('/', homeRoute);
 
 app.get('*', (req, res) => res.status(404).render('errors/404'));
 
