@@ -4,6 +4,9 @@ import 'dotenv/config';
 
 const app = express();
 
+// Remove warnings
+process.removeAllListeners("warning");
+
 // Middlewares
 app.set('views', resolve('./src/views'));
 app.set('view engine', 'ejs');
