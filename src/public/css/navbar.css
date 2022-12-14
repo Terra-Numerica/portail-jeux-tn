@@ -21,6 +21,10 @@ nav ul li a {
     color: white;
 }
 
+nav ul li a:hover {
+    text-shadow: 0 0 2px white;
+}
+
 nav ul li a::after {
     content: '';
     width: 0;
