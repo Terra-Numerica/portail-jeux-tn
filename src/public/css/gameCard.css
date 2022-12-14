@@ -62,6 +62,7 @@ div.card-tags {
   grid-column: 3;
   grid-row: 2;
   /* background-color: cyan; */
+  padding-top: 1rem;
   
 }
 
@@ -82,4 +83,14 @@ span.cycle-3 {
 }
 span.cycle-4 {
   background-color: purple;
+}
+
+span.card-tag {
+  background-color: var(--yellow);
+  padding: 0.2rem 0.2rem 0.2rem 0.3rem;
+  margin: 0.25rem 0;
+  border: solid 2px var(--darkBlue);
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 1.2rem;
 }

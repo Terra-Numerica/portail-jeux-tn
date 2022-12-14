@@ -14,7 +14,9 @@
     <h3>Cycle <span class="cycle cycle-<%= jeu.cycle %>"><%= jeu.cycle %> </span></h3>
   </div>
   <div class="card-tags">
-
+    <% jeu.themes.forEach(element => { %>
+      <span class="card-tag"><%= element %> </span>
+    <% }) %>
   </div>
 
 </div>

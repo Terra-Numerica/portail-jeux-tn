@@ -44,9 +44,11 @@ input[type="checkbox"] + label {
     padding: 0.5rem;
 }
 input[type="checkbox"]:checked + label{
-    background-color: var(--blue);
+    /* background-color: var(--blue); */
+    background-color: rgba(36, 161, 235, 0.8);
     color: var(--darkBlue);
     border-style: solid;
+    /* opacity: 0.2; */
 }
 
 div.game-card {
