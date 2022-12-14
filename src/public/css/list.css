@@ -16,6 +16,7 @@ input[type="search"] {
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 1rem;
+    border: solid 3px darkgray;
     padding: 0 0.5rem;
 }
 
@@ -43,7 +44,13 @@ span.search-element {
     padding: 0.5rem;
 }
 .search-element input[type="checkbox"]:checked + label{
-    background-color: var(--blue);
+    /* background-color: var(--blue); */
+    background-color: rgba(36, 161, 235, 0.8);
     color: var(--darkBlue);
     border-style: solid;
+    /* opacity: 0.2; */
+}
+
+div.game-card {
+    margin: 2rem;
 }
