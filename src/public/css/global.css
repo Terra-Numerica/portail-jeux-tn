@@ -4,6 +4,7 @@
 @import "navbar.css";
 @import "home.css";
 @import "list.css";
+@import "gameCard.css";
 
 :root{
     --blueHover: #117DBD;

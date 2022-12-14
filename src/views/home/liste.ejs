@@ -46,11 +46,12 @@
     <div>
 
       <% jeux.forEach(jeu => { %>
-        <div>
+        <%- include('../partials/gameCard', { jeu: jeu }) %>
+        <!-- <div>
           <h2><%= jeu.nom %></h2>
           <p></span><strong>Cycle : </strong><%= jeu.cycle %></p>
           <p><%= jeu.desc %> </p>  
-        </div>
+        </div> -->
       <% }) %>
 
     </div>

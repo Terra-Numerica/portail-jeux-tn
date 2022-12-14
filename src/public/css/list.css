@@ -17,6 +17,7 @@ input[type="search"] {
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 1rem;
+    border: solid 3px darkgray;
     padding: 0 0.5rem;
 }
 
@@ -46,4 +47,8 @@ input[type="checkbox"]:checked + label{
     background-color: var(--blue);
     color: var(--darkBlue);
     border-style: solid;
+}
+
+div.game-card {
+    margin: 2rem;
 }
