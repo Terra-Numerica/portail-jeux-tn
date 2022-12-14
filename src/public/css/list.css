@@ -1,9 +1,8 @@
-h1 {
+search-title {
     text-align: center;
     margin: 2rem;
     font-size: 3rem;
 }
-
 
 div.search-wrapper {
     display: flex;
@@ -31,7 +30,8 @@ span.search-element {
     visibility: hidden;
     opacity: 0;
 }
-input[type="checkbox"] + label {
+
+.search-element input[type="checkbox"] + label {
     color: var(--darkBlue);
     cursor: pointer;
     border-radius: 15px;
@@ -42,7 +42,7 @@ input[type="checkbox"] + label {
     user-select: none;
     padding: 0.5rem;
 }
-input[type="checkbox"]:checked + label{
+.search-element input[type="checkbox"]:checked + label{
     background-color: var(--blue);
     color: var(--darkBlue);
     border-style: solid;
