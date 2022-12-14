@@ -5,7 +5,7 @@ div.game-card {
   border-radius: 7px;
   display: grid;
   grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 3.5rem 1fr;
+  grid-template-rows: 4rem 1fr;
   overflow: hidden;
 }
 
@@ -30,14 +30,21 @@ div.card-title {
   grid-column: 2;
   grid-row: 1;
   /* background-color: green; */
-  text-align: center;
   font-size: 1.5rem;
 }
+div.card-title h2 {
+  text-align: center;
+  align-self: center;
+  padding: 0.5rem 0 0 0;
+}
+
 div.card-cycle {
   grid-column: 3;
   grid-row: 1;
   /* background-color: blue; */
-  
+  font-size: 2rem;
+  padding: 0.25rem 0 0 0;
+  text-align: center;
 }
 div.card-desc {
   grid-column: 2;
@@ -56,4 +63,23 @@ div.card-tags {
   grid-row: 2;
   /* background-color: cyan; */
   
+}
+
+
+span.cycle {
+  padding: 0 1rem;
+  border: solid 5px var(--darkBlue);
+  border-radius: 100%;
+}
+span.cycle-1 {
+  background-color: red;
+}
+span.cycle-2 {
+  background-color: green;
+}
+span.cycle-3 {
+  background-color: blue;
+}
+span.cycle-4 {
+  background-color: purple;
 }
