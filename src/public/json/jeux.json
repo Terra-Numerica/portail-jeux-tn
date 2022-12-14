@@ -1,0 +1,30 @@
+[
+    {
+        "nom": "Coloration dans les graphes",
+        "thumbnail": "coloration.png",
+        "desc": "Ce jeu permet de comprendre la notion de graphe, de problème d’optimisation et de modélisation. Le jeu de coloration permet également de comprendre la notion d’algorithme et les problématiques de recherche actuelle.",
+        "cycle": "2",
+        "themes": ["mathématiques discrètes", "graphes", "algorithmes dans les graphes", "complexité", "réseaux et systèmes distribués", "architecture et conception de réseaux", "programmation"]
+    },
+    {
+        "nom": "Alice et Bob, artistes peintres",
+        "thumbnail": "peintres.png",
+        "desc": "Découvrir ce jeu à deux joueurs dans les graphes : chacun voulant construire la plus grande composante de sa couleur.<br>Les joueurs découvrent les règles du jeu. Elles sont les suivantes. Les joueurs sont face à un graphe. Chaque joueur dispose de jeton de sa propre couleur. Chacun son tour, les joueurs doivent poser un de leur jeton sur un sommet qui en est dépourvu. A la fin du jeu, le joueur qui gagne est celui qui à la plus grande composante connexe de sa couleur. Une composante connexe d'une couleur est un ensemble de sommets de cette couleur telle qu'on puisse aller d'un sommet à un autre de cet ensemble en suivant des arêtes et sans passer par un sommet de l'autre couleur. Si les plus grandes composantes connexes des deux joueurs sont de même taille, alors il y a match nul. Les joueurs jouent ensuite sur différents graphes, en essayant d'élaborer des stratégies gagnantes.",
+        "cycle": "3",
+        "themes": ["algorithmes dans les graphes", "complexité", "mathématiques discrètes", "programmation", "graphes"]
+    },
+    {
+        "nom": "Jeu de la contamination",
+        "thumbnail": "contamination.png",
+        "desc": "Expérimenter ce modèle de contamination en jouant.",
+        "cycle": "3",
+        "themes": ["algorithmes", "programmation"]
+    },
+    {
+        "nom": "Spot the lesion",
+        "thumbnail": "spot.png",
+        "desc": "Jeu en ligne pour essayer de battre des algorithmes d’intelligence artificielle pour la détection de lésions.",
+        "cycle": "3",
+        "themes": ["application aux SVT", "bioinformatique", "apprentissage", "intelligence artificielle"]
+    }
+]

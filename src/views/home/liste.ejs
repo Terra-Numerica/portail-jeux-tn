@@ -1,10 +1,59 @@
 <html lang="fr">
 
 <%- include('../partials/head', { title: 'Liste' }) %>
+<link rel="stylesheet" href="/css/list.css">
 
 <body>
     
     <%- include('../partials/navbar') %>
+
+    <!--Titre-->
+    <h1>Parcourir les jeux en ligne</h1>
+
+    <!--Recherche / filtrage-->
+    <div class="search-wrapper">
+
+      <input type="search" class="search-element" placeholder="Recherchez par mot-clé">
+
+      <span class="search-element">
+        <input type="checkbox" class="hidden" id="cb">
+        <label for="cb">Cycle 1 (Maternelle)</label>
+      </span>
+      <span class="search-element">
+        <input type="checkbox" class="hidden" id="cb2">
+        <label for="cb2">Cycle 1 (Maternelle)</label>
+      </span>
+      <span class="search-element">
+        <input type="checkbox" class="hidden" id="cb3">
+        <label for="cb3">Cycle 1 (Maternelle)</label>
+      </span>
+      
+      <!-- <input type="checkbox" class="search-element" name="" id="cycle1">
+      <label for="check1">Cycle 1 (Maternelle)</label>
+
+      <input type="checkbox" class="search-element" name="" id="cycle2">
+      <label for="check2">Cycle 2 (CP - CE2)</label>
+
+      <input type="checkbox" class="search-element" name="" id="cycle3">
+      <label for="check3">Cycle 3 (CMI - 6e)</label>
+
+      <input type="checkbox" class="search-element" name="" id="cycle4">
+      <label for="check4">Cycle 4 (5e - 3e)</label> -->
+
+    </div>
+
+    <!--Liste-->
+    <div>
+
+      <% jeux.forEach(jeu => { %>
+        <div>
+          <h2><%= jeu.nom %></h2>
+          <p></span><strong>Cycle : </strong><%= jeu.cycle %></p>
+          <p><%= jeu.desc %> </p>  
+        </div>
+      <% }) %>
+
+    </div>
     
 </body>
 </html>
