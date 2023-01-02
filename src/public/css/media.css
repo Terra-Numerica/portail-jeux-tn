@@ -6,6 +6,15 @@
     .container .description {
         padding: 4rem 3rem;
     }
+
+    .container .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container .cards .card {
+        width: 35%;
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -18,6 +27,10 @@
     .container .description {
         padding: 1rem 3rem;
         font-size: 1.25rem;
+    }
+
+    .container .cards .card {
+        width: 40%;
     }
 }
 
@@ -56,6 +69,15 @@
     #check:checked ~ ul {
         left: 0;
     }
+
+    .container .cards {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container .cards .card {
+        width: 85%;
+    }
 }
 
 @media screen and (max-width: 475px) {
@@ -72,5 +94,9 @@
     .container .graph div a img {
         width: 85%;
         height: 85%;
+    }
+
+    .container .cards .card {
+        width: 90%;
     }
 }

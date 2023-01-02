@@ -7,89 +7,29 @@
     <%- include('../partials/navbar') %>
 	
 	<div class="container">
+
 		<h1 class="title">Liste des jeux en ligne</h1>
 
-	<!--Titre-->
-    <!-- <h1 class="search-title">Parcourir les jeux en ligne</h1> -->
+		<div class="cards">
+			<% jeux.forEach((jeu) => { %>
+				<div class="card">
+					
+					<img src="/images/<%= jeu.thumbnail %>" alt="<%= jeu.name %>" width="25%">
+					
+					<div class="card-details">
+						
+						<div class="name"><%= jeu.name %></div>
 
-    <!--Recherche / filtrage-->
-	<div class="search-wrapper">
-	
-		<input type="search" class="search-element" placeholder="Recherchez par mot-clé">
-	
-		<span class="search-element">
-			<input type="checkbox" class="hidden" id="cb">
-			<label for="cb">Cycle 1 (Maternelle)</label>
-		</span>
-		<span class="search-element">
-			<input type="checkbox" class="hidden" id="cb2">
-			<label for="cb2">Cycle 2 (CP - CE2)</label>
-		</span>
-		<span class="search-element">
-			<input type="checkbox" class="hidden" id="cb3">
-			<label for="cb3">Cycle 3 (CM1 - 6e)</label>
-		</span>
-		<span class="search-element">
-			<input type="checkbox" class="hidden" id="cb4">
-			<label for="cb4">Cycle 4 (5e - 3e)</label>
-		</span>
-	
-		<!-- <input type="checkbox" class="search-element" name="" id="cycle1">
-	      <label for="check1">Cycle 1 (Maternelle)</label>
-	
-	      <input type="checkbox" class="search-element" name="" id="cycle2">
-	      <label for="check2">Cycle 2 (CP - CE2)</label>
-	
-	      <input type="checkbox" class="search-element" name="" id="cycle3">
-	      <label for="check3">Cycle 3 (CMI - 6e)</label>
-	
-	      <input type="checkbox" class="search-element" name="" id="cycle4">
-	      <label for="check4">Cycle 4 (5e - 3e)</label> -->
-	
+						<button>En savoir plus</button>
+					</div>
+				</div>
+			<%})%>
+		</div>
+
 	</div>
-	
-	<!--Liste-->
-	<div>
-		<% jeux.forEach(jeu=> { %>
-			<div class="game-card">
-			
-				<!-- <h2>bonjoure je suis <%= jeu.nom %> </h2> -->
-				<div class="card-image">
-					<img src="/images/<%= jeu.thumbnail %>" alt="">
-				</div>
 
-				<div class="card-title">
-					<h2><%= jeu.nom %></h2>
-				</div>
-
-				<div class="card-desc">
-					<p><%= jeu.desc %></p>
-				</div>
-
-				<div class="card-cycle">
-					<h3>
-						Cycle <span class="cycle cycle-<%= jeu.cycle %>"><%= jeu.cycle %></span>
-					</h3>
-				</div>
-				<div class="card-tags">
-					<% jeu.themes.forEach(element=> { %>
-						<span class="card-tag">
-							<%= element %>
-						</span>
-					<% }) %>
-				</div>
-			
-			</div>
-			<!-- <div>
-	          <h2><%= jeu.nom %></h2>
-	          <p></span><strong>Cycle : </strong><%= jeu.cycle %></p>
-	          <p><%= jeu.desc %> </p>  
-	        </div> -->
-		<% }) %>
-	</div>
-	
 	<%- include('../partials/footer') %>
-    
+
 </body>
 
 </html>
