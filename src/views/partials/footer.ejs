@@ -1,0 +1,38 @@
+<footer>
+
+    <!-- <div class="social-networks">
+        
+        <a href="https://www.youtube.com/channel/UCWYouN1klJaJy2IUFg5vFGQ" target="blank">
+            <img src="/images/social_networks/youtube.png" alt="Logo Youtube">
+        </a>
+        
+        <a href="www.instagram.com/terranumerica/" target="blank">
+            <img src="/images/social_networks/instagram.png" alt="Logo Instagram">
+        </a>
+        
+        <a href="https://www.facebook.com/TerraNumerica/" target="blank">
+            <img src="/images/social_networks/facebook.png" alt="Logo Facebook">
+        </a>
+        
+        <a href="https://twitter.com/terra_numerica" target="blank">
+            <img src="/images/social_networks/twitter.png" alt="Logo Twitter">
+        </a>
+        
+        <a href="https://github.com/Terra-Numerica" target="blank">
+            <img src="/images/social_networks/github.png" alt="Logo Github">
+        </a>
+        
+    </div> -->
+
+    <script src="/js/footer.js"></script>
+
+    <% 
+        let copyrightYear = new Date().getFullYear();
+    
+        if(copyrightYear === 2022) copyrightYear = "2022";
+        else copyrightYear = `2022 - ${copyrightYear}`;
+    %>
+
+    <p>Terra Numerica | ©Copyright <%= copyrightYear %></p>
+
+</footer>

@@ -1,0 +1,29 @@
+.container .sub-title {
+    margin: 2.5rem;
+    color: var(--astro);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.container .documentation, .graph {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.container .documentation div, .graph div {
+    background-color: var(--darkBlue);
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 1.25rem;
+}
+
+.container .documentation div a, .graph div a {
+    color: white;
+}
+
+.container .graph {
+    margin-bottom: 5rem;
+}

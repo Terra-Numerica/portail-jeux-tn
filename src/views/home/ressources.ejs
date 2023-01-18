@@ -1,0 +1,54 @@
+<html lang="fr">
+
+<%- include('../partials/head', { title: 'Ressources' }) %>
+
+<body>
+    
+    <%- include('../partials/navbar') %>
+    
+    <div class="container">
+        
+        <h1 class="title">Ressources</h1>
+
+        <h3 class="sub-title">Le jeu du Websurfeur</h3>
+
+        <div class="documentation">
+            <div>
+                <a href="/resources/Protocole Ajout de Graphes VF.pdf">Protocole d'ajout de graphes</a>
+            </div>
+            
+            <div>
+                <a href="/resources/Strategies de l'IA.pdf">Stratégies de l'IA</a>
+            </div>
+        </div>
+
+        <h3 class="sub-title">Des graphes à télécharger :</h3>
+
+        <div class="graph">
+            <div>
+                <a href="/resources/petersen.json" download="/resources/petersen.json">
+                    Graphe Petersen <br>
+                    <img src="/images/petersen.png" width="220" height="200">
+                </a>
+            </div>
+        
+            <div>
+                <a href="/resources/classic.json" download="/resources/classic.json">
+                    Graphe Classique <br>
+                    <img src="/images/classic.png" width="400" height="200">
+                </a>
+            </div>
+            
+            <div>
+                <a href="/resources/dodecahedron.json" download="/resources/dodecahedron.json">
+                    Graphe Dodecahedron <br>
+                    <img src="/images/dodecahedron.png" width="220" height="200">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+    
+</body>
+</html>

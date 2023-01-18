@@ -1,0 +1,35 @@
+<html lang="fr">
+
+<%- include('../partials/head', { title: 'Liste des jeux' }) %>
+
+<body>
+    
+    <%- include('../partials/navbar') %>
+	
+	<div class="container">
+
+		<h1 class="title">Liste des jeux en ligne</h1>
+
+		<div class="cards">
+			<% jeux.forEach((jeu) => { %>
+				<div class="card">
+					
+					<img src="/images/<%= jeu.thumbnail %>" alt="<%= jeu.name %>" width="25%">
+					
+					<div class="card-details">
+						
+						<div class="name"><%= jeu.name %></div>
+
+						<button>En savoir plus</button>
+					</div>
+				</div>
+			<%})%>
+		</div>
+
+	</div>
+
+	<%- include('../partials/footer') %>
+
+</body>
+
+</html>
