@@ -5,6 +5,7 @@
 
 @import "views/home.css";
 @import "views/list.css";
+@import "views/play.css";
 @import "views/resources.css";
 
 @import "media.css";
@@ -33,7 +34,10 @@
 }
 
 body {
-    background-image: linear-gradient(135deg, var(--yellow), var(--green), var(--blue));
+    background-color: whitesmoke;
+    /* background-image: radial-gradient(var(--blue), var(--green), white); */
+    /* background-image: linear-gradient(135deg, var(--blue), white); */
+    /* background-image: linear-gradient(135deg, var(--yellow), var(--green), var(--blue)); */
     font-family: 'Poppins', sans-serif;
     background-attachment: fixed;
 }
