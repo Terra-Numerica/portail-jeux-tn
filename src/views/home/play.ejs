@@ -1,0 +1,27 @@
+<html lang="fr">
+
+<%- include('../partials/head', { title: jeu.name }) %>
+
+<body>
+    
+    <%- include('../partials/navbar') %>
+    
+    <div class="container">
+        
+        <h1 class="title"><%= jeu.name %></h1>
+
+        <!-- <img src="/images/white_font.png" alt="" width="85%" height="65%"> -->
+        
+        <% if(jeu.idScratch) { %>        
+            <iframe allowtransparency="true" src="//scratch.mit.edu/projects/embed/<%= jeu.idScratch %>/?autostart=false" frameborder="0" allowfullscreen></iframe>
+        <% }else{ %>
+
+        <%}%>
+
+        <p>Explication : <%- jeu.description %></p>
+    </div>
+    
+    <%- include('../partials/footer') %>
+    
+</body>
+</html>

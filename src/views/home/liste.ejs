@@ -10,21 +10,49 @@
 
 		<h1 class="title">Liste des jeux en ligne</h1>
 
+		<div class="searcher">
+			
+			<div class="search-checkbox">
+				<span>
+					<input type="checkbox" class="hidden" id="cb">
+					<label for="cb">Cycle 1 (Maternelle)</label>
+				</span>
+				<span>
+					<input type="checkbox" class="hidden" id="cb2">
+					<label for="cb2">Cycle 2 (CP - CE2)</label>
+				</span>
+				<span>
+					<input type="checkbox" class="hidden" id="cb3">
+					<label for="cb3">Cycle 3 (CM1 - 6e)</label>
+				</span>
+				<span>
+					<input type="checkbox" class="hidden" id="cb4">
+					<label for="cb4">Cycle 4 (5e - 3e)</label>
+				</span>
+			</div>
+
+			<input type="search" id="search-name" class="search-input" placeholder="Recherche par mot-clé..">
+
+		</div>
+
 		<div class="cards">
 			<% jeux.forEach((jeu) => { %>
 				<div class="card">
+
+					<div class="name"><%= jeu.name %></div>
+
+					<label class="cycle">Cycle <%= jeu.cycle %></label>
 					
 					<img src="/images/<%= jeu.thumbnail %>" alt="<%= jeu.name %>" width="25%">
-					
-					<div class="card-details">
-						
-						<div class="name"><%= jeu.name %></div>
 
-						<button>En savoir plus</button>
-					</div>
+					<span class="tags"><%= jeu.tags.join(", ") %></span>
+
+					<a href="/play/<%= jeu.id %>"><button>Jouer</button></a>
 				</div>
 			<%})%>
 		</div>
+
+		<script src="/js/autocomplete.js"></script>
 
 	</div>
 
