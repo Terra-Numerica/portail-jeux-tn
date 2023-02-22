@@ -1,39 +1,76 @@
-.cards {
+.container .searcher {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    gap: 4rem;
+}
+
+.container .searcher .search-checkbox {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.container .searcher .search-checkbox input[type="checkbox"]+label {
+    border: 2px var(--darkBlue);
+    color: var(--darkBlue);
+    border-style: dashed;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.container .searcher .search-checkbox input[type="checkbox"]:checked+label {
+    background-color: var(--blue);
+    color: var(--darkBlue);
+    border-style: solid;
+}
+
+.container .searcher .search-input {
+    width: 16rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: solid 2px var(--darkBlue);
+}
+
+.container .cards {
     flex-direction: row;
     display: flex;
-    margin: 4rem;
+    margin: 3.5rem;
     gap: 1rem;
 }
 
-.card {
+.container .cards .card {
     background-color: var(--darkBlue);
+    justify-content: space-between;
     border: 2px solid white;
+    flex-direction: column;
     border-radius: 8px;
-    padding: 8px 16px;
+    padding: 1rem;
+    display: flex;
     width: 25%;
 }
 
-.card img {
+.container .cards .card img {
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
 }
 
-.container .cards .card .card-details {
-    padding: 1rem;
+.container .cards .card .cycle, .tags {
+    color: whitesmoke;
 }
 
-.tag {
-    padding: 4px 8px;
-    border: 1px solid #e5eaed;
-    display: flex;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #788697;
-}
-
-.name {
+.container .cards .card .name {
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
@@ -42,14 +79,28 @@
     display: flex;
 }
 
+.container .cards .card .cycle {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.container .cards .card .tags {
+    margin: 2rem 0;
+}
+
+.container .cards .card a {
+    margin: 0 auto;
+    display: block;
+    width: 10rem;
+    margin-top: 1.5rem;
+}
+
 .container .cards .card button {
     border: 2px solid white;
     background-color: white;
     border-radius: 8px;
-    padding: 8px 16px;
+    padding: 8px 30px;
     font-weight: bold;
     cursor: pointer;
-    margin: 0 auto;
-    display: block;
-    margin-top: 1.5rem;
+    width: 100%;
 }
