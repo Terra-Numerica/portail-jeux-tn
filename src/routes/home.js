@@ -1,12 +1,12 @@
-import jeux from '../public/json/jeux.json' assert {type: 'json'};
+import { getJeux, getJeu } from '../utils.js';
 import { Router } from "express";
 const router = Router();
 
 router.get('/', (_, res) => res.render('home/accueil'));
 
-router.get('/liste', (_, res) => res.render('home/liste', {jeux : jeux}));
+router.get('/liste', async (_, res) => res.render('home/liste', { jeux : await getJeux() }));
 
-router.get("/play/:id", (req, res) => res.render('home/play', { jeu: jeux.find((jeu) => jeu.id === req.params.id) }));
+router.get("/play/:id", async (req, res) => res.render('home/play', { jeu: await getJeu(req.params.id) }));
 
 router.get('/ressources', (_, res) => res.render('home/ressources'));
 
