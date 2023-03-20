@@ -59,6 +59,12 @@
     }
 }
 
+@media screen and (max-width: 1150px) {
+    .container .searcher .search-checkbox {
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 1045px) {
     .container .documentation, .graph {
         display: grid;
@@ -71,12 +77,6 @@
 
     .container .tripleLogo {
         width: 50rem;
-    }
-}
-
-@media screen and (max-width: 975px) {
-    .container .searcher .search-checkbox {
-        flex-direction: column;
     }
 }
 
