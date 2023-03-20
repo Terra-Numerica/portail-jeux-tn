@@ -1,24 +1,26 @@
 <html lang="fr">
 
 <%- include('../partials/head', { title: jeu.name }) %>
-
 <body>
     
     <%- include('../partials/navbar') %>
     
     <div class="container">
-        
+
         <h1 class="title"><%= jeu.name %></h1>
+        <p><%- jeu.description?.split('Version jeu en ligne - ')[1] %></p>
 
         <!-- <img src="/images/white_font.png" alt="" width="85%" height="65%"> -->
-        
-        <% if(jeu.idScratch) { %>        
-            <iframe allowtransparency="true" src="//scratch.mit.edu/projects/embed/<%= jeu.idScratch %>/?autostart=false" frameborder="0" allowfullscreen></iframe>
-        <% }else{ %>
+        <%
+            let gamelink = jeu.online_app_url;
 
-        <%}%>
+            if(jeu.online_app_url.includes('scratch') && jeu.online_app_url.includes('/fullscreen')) {
+                gamelink = jeu.online_app_url.replace("/fullscreen", "/embed");
+            };
+        %>
 
-        <p>Explication : <%- jeu.description %></p>
+        <iframe allowtransparency="true" src="<%= gamelink %>" frameborder="0" allowfullscreen></iframe>
+
     </div>
     
     <%- include('../partials/footer') %>

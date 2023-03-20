@@ -14,8 +14,8 @@
 			
 			<div class="search-checkbox">
 				<span>
-					<input type="checkbox" class="hidden" id="cb">
-					<label for="cb">Cycle 1 (Maternelle)</label>
+					<input type="checkbox" class="hidden" id="cb1">
+					<label for="cb1">Cycle 1 (Maternelle)</label>
 				</span>
 				<span>
 					<input type="checkbox" class="hidden" id="cb2">
@@ -29,6 +29,14 @@
 					<input type="checkbox" class="hidden" id="cb4">
 					<label for="cb4">Cycle 4 (5e - 3e)</label>
 				</span>
+				<span>
+					<input type="checkbox" class="hidden" id="cb5">
+					<label for="cb5">Lycée</label>
+				</span>
+				<span>
+					<input type="checkbox" class="hidden" id="cb6">
+					<label for="cb6">Supérieur</label>
+				</span>
 			</div>
 
 			<input type="search" id="search-name" class="search-input" placeholder="Recherche par mot-clé..">
@@ -41,18 +49,22 @@
 
 					<div class="name"><%= jeu.name %></div>
 
-					<label class="cycle">Cycle <%= jeu.cycle %></label>
+					<label class="cycle"><%= jeu.school_levels.join(", ") %></label>
 					
-					<img src="/images/<%= jeu.thumbnail %>" alt="<%= jeu.name %>" width="25%">
-
-					<span class="tags"><%= jeu.tags.join(", ") %></span>
-
-					<a href="/play/<%= jeu.id %>"><button>Jouer</button></a>
+					<img src="<%= jeu.illustration %>" alt="<%= jeu.name %>" width="25%">
+					
+					<span class="tags"><%= jeu.themes.join(", ") %></span>
+					
+					<% if(jeu.open_in_new_tab) { %>
+						<a href="<%= jeu.online_app_url %>"><button>Jouer</button></a>						
+					<% }else{ %>
+						<a href="/play/<%= jeu.id %>"><button>Jouer</button></a>
+					<%}%>
 				</div>
 			<%})%>
 		</div>
 
-		<script src="/js/autocomplete.js"></script>
+		<script src="/js/searcher.js"></script>
 
 	</div>
 
