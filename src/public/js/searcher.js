@@ -1,5 +1,7 @@
 const checkboxes = document.querySelectorAll(".search-checkbox input[type='checkbox']");
 const searchInput = document.querySelector("#search-name");
+const noResult = document.querySelector("#no-result");
+const loading = document.querySelector("#loading");
 const cards = document.querySelector(".cards");
 
 let timer;
@@ -28,22 +30,32 @@ function useSearcher() {
 
     fetch("/api/jeux?" + searchValues.join("&")).then((res) => res.json()).then((res) => {
 
-        if(res.length === 0) footer.style.bottom = 0;
-        else footer.style.bottom = null;
-
         while (cards.firstChild) cards.removeChild(cards.firstChild);
+        
+        if (res.length === 0) {
+            footer.style.bottom = 0;
+            noResult.style.display = null;
+        } else {
+            footer.style.bottom = null;
+            noResult.style.display = "none";
 
-        res.forEach((jeu) => {
-            cards.insertAdjacentHTML('beforeend', `
-                <div class="card">
-                    <div class="name">${jeu.name}</div>
-                    <label class="cycle">${jeu.school_levels.join(", ")}</label>
-                    <img src="${jeu.illustration}" alt="${jeu.name}" width="25%">
-                    <span class="tags">${jeu.themes.join(", ")}</span>
-                    <a href="${jeu.open_in_new_tab ? jeu.online_app_url : `/play/${jeu.id}`}"><button>Jouer</button></a>
-                </div>
-            `);
-        });
+            loading.style.display = null;
+    
+            setTimeout(() => {
+                loading.style.display = "none";
+                res.forEach((jeu) => {
+                    cards.insertAdjacentHTML('beforeend', `
+                        <div class="card">
+                            <div class="name">${jeu.name}</div>
+                            <label class="cycle">${jeu.school_levels.join(", ")}</label>
+                            <img src="${jeu.illustration}" alt="${jeu.name}" width="25%">
+                            <span class="tags">${jeu.themes.join(", ")}</span>
+                            <a href="${jeu.open_in_new_tab ? jeu.online_app_url : `/play/${jeu.id}`}"><button>Jouer</button></a>
+                        </div>
+                    `);
+                });
+            }, 1000);
+        };
     });
 };
 
